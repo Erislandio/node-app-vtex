@@ -47,6 +47,14 @@
       }
     },
     {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "viacep.com.br",
+        "path": "*"
+      }
+    },
+
+    {
       "name": "colossus-fire-event"
     },
     {

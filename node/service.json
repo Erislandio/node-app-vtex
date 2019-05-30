@@ -12,6 +12,10 @@
     "search": {
       "path": "/quod/search/:cnpj",
       "public": true
+    },
+    "cep": {
+      "path": "/quod/cep",
+      "public": true
     }
   }
 }

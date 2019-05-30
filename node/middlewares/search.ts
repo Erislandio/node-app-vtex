@@ -1,22 +1,4 @@
 export const search = async (ctx: Context, next: () => Promise<any>) => {
-  // if (!code) {
-  //   throw new UserInputError("Code is required");
-  // }
-
-  // const codeNumber = parseInt(code as string, 10);
-
-  // if (isNaN(codeNumber) || codeNumber < 100 || codeNumber > 600) {
-  //   throw new UserInputError("Code must be a number");
-  // }
-
-  // Se não tiver cadastro consulta o regime tributário e retorna os dados
-  // const emptyUserMock = [
-  //   {
-  //     corporateDocument: "99.573.830/0001-75",
-  //     regimeTributario: "Simples Nacional"
-  //   }
-  // ];
-
   const {
     clients: { search: searchClient },
     vtex: {
@@ -25,6 +7,8 @@ export const search = async (ctx: Context, next: () => Promise<any>) => {
       }
     }
   } = ctx;
+
+  console.log(ctx);
 
   ctx.set("Content-type", "application/json");
   ctx.set("X-Vtex-Use-Https", "true");

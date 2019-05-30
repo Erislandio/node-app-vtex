@@ -6,6 +6,7 @@ import { Clients } from "./clients";
 import { methodNotAllowed } from "./middlewares/methods";
 import { signup } from "./middlewares/signup";
 import { search } from "./middlewares/search";
+import { cep } from "./middlewares/cep";
 
 const THREE_SECONDS_MS = 3 * 1000;
 const ONE_SECOND_MS = 1 * 1000;
@@ -32,6 +33,10 @@ export default new Service({
     search: method({
       DEFAULT: methodNotAllowed,
       GET: search
+    }),
+    cep: method({
+      DEFAULT: methodNotAllowed,
+      GET: cep
     })
   }
 });
